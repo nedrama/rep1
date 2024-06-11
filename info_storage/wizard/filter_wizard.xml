@@ -10,7 +10,7 @@
                         <field name='to_date'/>
                     </group>
                     <group>                        
-                        <field name='worker' readonly="1"/>
+                        <field name='worker' widget='selection'/>
                     </group>
                 </group>
 

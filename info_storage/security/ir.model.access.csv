@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+info_storage.access_book_user,Storage user,info_storage.model_info_storage_book,group_storage_user,1,1,1,1
+info_storage.access_book_admin,Administrator,info_storage.model_info_storage_book,group_admin,1,1,1,1
+info_storage.access_worker_user,Storage user,info_storage.model_worker,group_storage_user,1,1,1,0
+info_storage.access_worker_admin,Administrator,info_storage.model_worker,group_admin,1,1,1,0
+info_storage.access_wizard_user,Storage user,info_storage.model_filter_wizard,group_storage_user,1,1,1,0
+info_storage.access_wizard_admin,Administrator,info_storage.model_filter_wizard,group_admin,1,1,1,0
+
+

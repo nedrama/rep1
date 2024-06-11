@@ -1,0 +1,35 @@
+<odoo>
+    <record id='filter_wizard_form' model='ir.ui.view'>
+        <field name='name'>filter.report.wizard</field>
+        <field name='model'>filter.wizard</field>
+        <field name="arch" type='xml'>
+            <form string='Dokumentai ir knygos'>
+                <group>
+                    <group string="Data">
+                        <field name='from_date'/>
+                        <field name='to_date'/>
+                    </group>
+                    <group>                        
+                        <field name='worker' readonly="1"/>
+                    </group>
+                </group>
+
+                <footer>
+                    <button name='filter_books' string='Filtruoti' class='btn-primary' type='object'/>
+                    <button string="Atšaukti" class='btn-secondary' special='cancle'/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id='filter_wizard' model='ir.actions.act_window'>
+        <field name='name'>Dokumentai/Knygos</field>
+        <field name='type'>ir.actions.act_window</field>
+        <field name='res_model'>filter.wizard</field>
+        <field name='view_mode'>form</field>
+        <field name='view_id' ref='filter_wizard_form'/>
+        <field name='target'>new</field>
+    </record> 
+
+    <menuitem id='filter_wizard_menu' name='Filtravimas' parent="info_storage_base_menu" action='filter_wizard'/>
+</odoo>

@@ -1,0 +1,10 @@
+<odoo>
+    <menuitem id="info_storage_base_menu" name="Storage Application"/>
+    <record id="action_book" model="ir.actions.act_window">
+        <field name="name">Dokumentai knygos</field>
+        <field name="res_model">info_storage.book</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="info_storage_menu_book" name="Dokumentai ir knygos" parent="info_storage_base_menu" action="action_book" />
+</odoo>

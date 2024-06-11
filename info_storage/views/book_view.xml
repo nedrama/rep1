@@ -1,0 +1,43 @@
+<odoo>
+    <!-- Form -->
+    <record id="view_form_book" model="ir.ui.view">
+        <field name="name">Forma</field>
+        <field name="model">info_storage.book</field>
+        <field name="arch" type="xml">
+            <form string="Book">
+                <sheet>
+                    <!-- Content -->
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="name" />
+                            <field name="description"/>
+                            <field name="company"/>
+                            
+                        </group>
+                        <group name="group_right">
+                            <field name="worker" options="{'no_create_edit': True}" widget="many2many_tags"/>
+                            <field name="maker" readonly="1"/>
+                            <field name="cdate" readonly="1" widget='date'/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree List -->
+    <record id="view_tree_book" model="ir.ui.view">
+        <field name="name">Rodinys</field>
+        <field name="model">info_storage.book</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="company"/>
+                <field name="maker"/>
+                <field name="worker" widget="many2many_tags"/>
+                <field name="cdate" widget='date'/>
+            </tree>
+        </field>
+    </record>
+</odoo>
